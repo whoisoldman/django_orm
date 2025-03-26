@@ -6,12 +6,16 @@
 ### Структура проекта
 ```
 django_orm/
+├── .github/
+│   └── workflows/
+│       ├── ruff.yml          # GitHub Actions: проверка кода через ruff
+│       └── test.yml          # GitHub Actions: запуск Django-тестов
 ├── company/
 │   ├── migrations/
 │   ├── __init__.py
 │   ├── admin.py
 │   ├── apps.py
-│   ├── models.py # Модели: Branch, Department, Employee
+│   ├── models.py             # Модели: Branch, Department, Employee
 │   ├── tests.py
 │   └── views.py
 ├── django_orm/
@@ -20,8 +24,13 @@ django_orm/
 │   ├── settings.py
 │   ├── urls.py
 │   └── wsgi.py
+├── .ruff_cache/              # Кэш, генерируемый инструментом ruff
+├── .venv/                    # Виртуальное окружение Python (локально)
 ├── db.sqlite3
 ├── manage.py
+├── pyproject.toml            # Конфигурация ruff
+├── requirements.in           # Зависимости проекта (pip-tools)
+├── requirements.txt          # Сгенерированный файл зависимостей
 └── README.md
 ```
 
